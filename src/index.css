@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Digital Atelier Shared Header */
+.atelier-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.atelier-nav-links {
+  display: flex;
+  gap: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #6a6a7c;
+}
+
+.atelier-nav-links span {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.atelier-nav-links span:hover {
+  color: #111;
+}
+
+.atelier-nav-icons {
+  display: flex;
+  gap: 15px;
+  color: #111;
+}
+
+.atelier-nav-icons svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  color: #111;
+  margin-right: 15px;
+}
+
+.hamburger-menu svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Utilities */
+@media (max-width: 992px) {
+  .atelier-header {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .atelier-nav-links {
+    display: none; /* Hide main nav links on mobile, will show in drawer */
+  }
+  
+  .hamburger-menu {
+    display: block;
+  }
+  
+  .atelier-header {
+    padding: 10px 0;
+  }
+}
+
+/* Mobile Sidebar Drawer Overlay (Shared) */
+.mobile-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+}
+
+.mobile-sidebar-drawer {
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  padding: 30px 20px;
+}
+
+.mobile-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.mobile-sidebar-close {
+  cursor: pointer;
+}
